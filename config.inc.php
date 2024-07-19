@@ -13,7 +13,6 @@ $config['tmp'] = sys_get_temp_dir();
 $config['php'] = '/opt/homebrew/opt/php@7.4/bin/php';
 
 // Heroku
-$config['php'] = ' /app/php/bin/php';
-
+$config['php'] = 'php';
 
 ?>
