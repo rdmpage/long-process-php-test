@@ -19,7 +19,7 @@ if (!$taskid)
 	exit();
 }
 
-$output_filename = $config['tmp'] . '/' . $taskid . '.json';
+$output_filename = $config['tmp'] . $taskid . '.json';
 
 if (!file_exists($output_filename))
 {

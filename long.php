@@ -17,7 +17,7 @@ else
 	$taskid = $argv[1];
 }
 
-$output_filename = $config['tmp'] . '/' . $taskid . '.json';
+$output_filename = $config['tmp'] . $taskid . '.json';
 
 // create status object at the start
 $obj = new stdclass;

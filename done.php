@@ -19,7 +19,7 @@ if (!$taskid)
 	exit();
 }
 
-$output_filename = $config['tmp'] . '/' . $taskid . '.json';
+$output_filename = $config['tmp'] . $taskid . '.json';
 
 if (!file_exists($output_filename))
 {
@@ -48,6 +48,8 @@ echo '<!DOCTYPE html>
 <body>';
 
 echo '<h1>Task ' . $taskid . ' is done!</h1>';
+
+echo '<p>' . $output_filename . '</p>';
 
 echo '<p>Here are the results.</p>';
 echo '<pre>';
