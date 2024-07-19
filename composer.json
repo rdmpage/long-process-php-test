@@ -1,0 +1,10 @@
+{
+    "name": "rpage/long-process-php-test",
+    "authors": [
+        {
+            "name": "Roderic Page",
+            "email": "rdmpage@gmail.com"
+        }
+    ],
+    "require": {}
+}
