@@ -13,18 +13,18 @@ if (isset($_GET['id']))
 
 if (!$taskid)
 {
-	echo "<html><head><title>Error</title></head><body>';
-	echo '<h1>No task id provided (use ?id=)</h1>";
+	echo '<html><head><title>Error</title></head><body>';
+	echo '<h1>No task id provided (use ?id=)</h1>';
 	echo '</body></html>';
 	exit();
 }
 
-$output_filename = $config['tmp'] . $taskid . '.json';
+$output_filename = $config['tmp'] . '/' . $taskid . '.json';
 
 if (!file_exists($output_filename))
 {
-	echo "<html><head><title>Error</title></head><body>';
-	echo '<h1>Status file $output_filename not found!";
+	echo '<html><head><title>Error</title></head><body>';
+	echo '<h1>Status file ' . $output_filename . ' not found!';
 	echo '</body></html>';
 	exit();
 }
@@ -35,8 +35,8 @@ $obj = json_decode($json);
 
 if (!$obj)
 {
-	echo "<html><head><title>Error</title></head><body>';
-	echo '<h1>Status file $output_filename can't be parsed.";
+	echo '<html><head><title>Error</title></head><body>';
+	echo '<h1>Status file ' . $output_filename . ' can not be parsed.';
 	echo $json;
 	echo '</body></html>';
 	exit();
